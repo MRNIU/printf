@@ -11,9 +11,8 @@ project(
 
 enable_language(CXX)
 
-
 # 设置依赖下载路径
-set(CPM_SOURCE_CACHE ${PROJECT_SOURCE_DIR}/3rd)
+set(CPM_SOURCE_CACHE ${PROJECT_SOURCE_DIR}/../3rd)
 # 优先使用本地文件
 set(CPM_USE_LOCAL_PACKAGES True)
 # https://github.com/cpm-cmake/CPM.cmake
