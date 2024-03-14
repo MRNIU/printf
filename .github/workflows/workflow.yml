@@ -15,10 +15,8 @@ env:
 
 jobs:
   build:
-    name: Build and publish documentation
+    name: Build and test
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
       - uses: actions/checkout@v3
 
@@ -29,5 +27,6 @@ jobs:
 
       - name: Build printf
         run: |
+          cmake --preset build
           cmake --build build --target printf
           cmake --build build --target printf_test
