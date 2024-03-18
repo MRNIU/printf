@@ -1,7 +1,7 @@
-# This file is a part of MRNIU/printf
-# (https://github.com/MRNIU/printf).
+# This file is a part of MRNIU/printf_bare_metal
+# (https://github.com/MRNIU/printf_bare_metal).
 #
-# .clang-format for MRNIU/printf.
+# .clang-format for MRNIU/printf_bare_metal.
 
 ---
 # @version clang-format version 15

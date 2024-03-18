@@ -1,16 +1,16 @@
 
-# This file is a part of MRNIU/printf
-# (https://github.com/MRNIU/printf).
+# This file is a part of MRNIU/printf_bare_metal
+# (https://github.com/MRNIU/printf_bare_metal).
 #
-# CMakeLists.txt for MRNIU/printf.
+# CMakeLists.txt for MRNIU/printf_bare_metal.
 
 # 设置最小 cmake 版本
 cmake_minimum_required(VERSION 3.27 FATAL_ERROR)
 
 # 设置项目名与版本
 project(
-        printf
-        VERSION 1.0.0
+        printf_bare_metal
+        VERSION 1.1.0
 )
 
 # 禁止原地编译

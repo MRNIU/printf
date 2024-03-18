@@ -35,8 +35,7 @@
 
 namespace test {
 // use functions in own test namespace to avoid stdio conflicts
-#include "../printf.c"
-#include "../printf.h"
+#include "printf_bare_metal.h"
 }  // namespace test
 
 // dummy putchar

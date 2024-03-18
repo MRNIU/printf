@@ -1,12 +1,12 @@
 
-# This file is a part of MRNIU/printf
-# (https://github.com/MRNIU/printf).
+# This file is a part of MRNIU/printf_bare_metal
+# (https://github.com/MRNIU/printf_bare_metal).
 #
-# CMakeLists.txt for MRNIU/printf.
+# CMakeLists.txt for MRNIU/printf_bare_metal.
 
 # 设置项目名与版本
 project(
-        printf_test
+        printf_bare_metal_test
 )
 
 enable_language(CXX)
@@ -77,12 +77,12 @@ target_compile_options(${PROJECT_NAME} PRIVATE
 
 # 添加要链接的库
 target_link_libraries(${PROJECT_NAME} PRIVATE
-        printf
+        printf_bare_metal
         gtest_main
 )
 
 add_dependencies(${PROJECT_NAME}
-        printf
+        printf_bare_metal
 )
 
 gtest_discover_tests(${PROJECT_NAME})

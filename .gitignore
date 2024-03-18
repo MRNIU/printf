@@ -1,8 +1,8 @@
 
-# This file is a part of MRNIU/printf
-# (https://github.com/MRNIU/printf).
+# This file is a part of MRNIU/printf_bare_metal
+# (https://github.com/MRNIU/printf_bare_metal).
 #
-# .gitignore for MRNIU/printf.
+# .gitignore for MRNIU/printf_bare_metal.
 
 # Prerequisites
 *.d

@@ -1,11 +1,11 @@
 
-# This file is a part of MRNIU/printf
-# (https://github.com/MRNIU/printf).
+# This file is a part of MRNIU/printf_bare_metal
+# (https://github.com/MRNIU/printf_bare_metal).
 #
-# CMakeLists.txt for MRNIU/printf.
+# CMakeLists.txt for MRNIU/printf_bare_metal.
 
 add_library(${PROJECT_NAME} STATIC
-        printf.c
+        printf_bare_metal.c
 )
 
 target_include_directories(${PROJECT_NAME} PUBLIC
@@ -19,4 +19,4 @@ target_compile_options(${PROJECT_NAME} PRIVATE
         -Wextra
 )
 
-set_target_properties(${PROJECT_NAME} PROPERTIES PUBLIC_HEADER "include/printf.h")
+set_target_properties(${PROJECT_NAME} PROPERTIES PUBLIC_HEADER "include/printf_bare_metal.h")
