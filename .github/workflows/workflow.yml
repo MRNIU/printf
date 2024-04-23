@@ -10,9 +10,6 @@ on:
   - pull_request
   - release
 
-env:
-  CMAKE_BUILD_TYPE: Release
-
 jobs:
   build:
     name: Build and test
@@ -27,6 +24,6 @@ jobs:
 
       - name: Build printf_bare_metal
         run: |
-          cmake --preset build
-          cmake --build build --target printf_bare_metal
-          cmake --build build --target printf_bare_metal_test
+          cmake --preset debug
+          cmake --build debug --target printf_bare_metal
+          cmake --build debug --target printf_bare_metal_test

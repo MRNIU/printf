@@ -10,7 +10,7 @@ cmake_minimum_required(VERSION 3.27 FATAL_ERROR)
 # 设置项目名与版本
 project(
         printf_bare_metal
-        VERSION 1.1.0
+        VERSION 1.6.0
 )
 
 # 禁止原地编译
@@ -23,6 +23,6 @@ endif ()
 
 add_subdirectory(${PROJECT_SOURCE_DIR}/src)
 
-if (${CMAKE_HOST_SYSTEM_PROCESSOR} STREQUAL ${CMAKE_SYSTEM_PROCESSOR})
+if (CMAKE_BUILD_TYPE STREQUAL "Debug")
     add_subdirectory(${PROJECT_SOURCE_DIR}/test)
 endif ()

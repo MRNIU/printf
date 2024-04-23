@@ -58,6 +58,8 @@ Mkfile.old
 dkms.conf
 
 build
+debug
+release
 3rd
 doc/html
 .idea

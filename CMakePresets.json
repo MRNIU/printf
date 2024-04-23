@@ -29,9 +29,6 @@
       "displayName": "configurePresets_base",
       "description": "base configurePresets",
       "generator": "Unix Makefiles",
-      "toolchainFile": "",
-      "binaryDir": "${sourceDir}/build",
-      "installDir": "${sourceDir}/build/install",
       "cacheVariables": {
         "CMAKE_VERBOSE_MAKEFILE": {
           "type": "BOOL",
@@ -40,21 +37,42 @@
         "CMAKE_EXPORT_COMPILE_COMMANDS": {
           "type": "BOOL",
           "value": "ON"
-        },
+        }
+      }
+    },
+    {
+      "name": "debug",
+      "hidden": false,
+      "inherits": [
+        "configurePresets_base"
+      ],
+      "displayName": "build for debug",
+      "description": "build for debug",
+      "binaryDir": "${sourceDir}/debug",
+      "installDir": "${sourceDir}/debug/install",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": {
+          "type": "STRING",
+          "value": "Debug"
+        }
+      }
+    },
+    {
+      "name": "release",
+      "hidden": false,
+      "inherits": [
+        "configurePresets_base"
+      ],
+      "displayName": "build for release",
+      "description": "build for release",
+      "binaryDir": "${sourceDir}/release",
+      "installDir": "${sourceDir}/release/install",
+      "cacheVariables": {
         "CMAKE_BUILD_TYPE": {
           "type": "STRING",
           "value": "Release"
         }
       }
-    },
-    {
-      "name": "build",
-      "hidden": false,
-      "inherits": [
-        "configurePresets_base"
-      ],
-      "displayName": "build",
-      "description": "build"
     }
   ]
 }
