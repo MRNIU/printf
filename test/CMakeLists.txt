@@ -11,30 +11,27 @@ project(
 
 enable_language(CXX)
 
-if (CMAKE_SYSTEM_PROCESSOR STREQUAL CMAKE_HOST_SYSTEM_PROCESSOR)
-    enable_testing()
-    find_package(GTest REQUIRED)
+enable_testing()
+find_package(GTest REQUIRED)
 
-    add_executable(${PROJECT_NAME}
-            test_suite.cpp
-    )
+add_executable(${PROJECT_NAME}
+        test_suite.cpp
+)
 
-    target_compile_options(${PROJECT_NAME} PRIVATE
-            -Wall
-            -Wextra
-    )
+target_compile_options(${PROJECT_NAME} PRIVATE
+        -Wall
+        -Wextra
+)
 
-    # 添加要链接的库
-    target_link_libraries(${PROJECT_NAME} PRIVATE
-            printf_bare_metal
-            GTest::gtest
-            GTest::gtest_main
-    )
+# 添加要链接的库
+target_link_libraries(${PROJECT_NAME} PRIVATE
+        printf_bare_metal
+        GTest::gtest
+        GTest::gtest_main
+)
 
-    add_dependencies(${PROJECT_NAME}
-            printf_bare_metal
-    )
+add_dependencies(${PROJECT_NAME}
+        printf_bare_metal
+)
 
-    gtest_discover_tests(${PROJECT_NAME})
-
-endif ()
+gtest_discover_tests(${PROJECT_NAME})
