@@ -23,6 +23,6 @@ endif ()
 
 add_subdirectory(${PROJECT_SOURCE_DIR}/src)
 
-if (NOT CMAKE_CROSSCOMPILING)
+if (${CMAKE_HOST_SYSTEM_PROCESSOR} STREQUAL ${CMAKE_SYSTEM_PROCESSOR})
     add_subdirectory(${PROJECT_SOURCE_DIR}/test)
 endif ()
