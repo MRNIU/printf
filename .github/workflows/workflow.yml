@@ -20,11 +20,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Install dependencies
-        run: |
-          sudo apt update
-          sudo apt install --fix-missing -y gcc g++
-
       - name: Build printf_bare_metal
         run: |
           cmake --preset build
