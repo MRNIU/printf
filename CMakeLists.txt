@@ -10,7 +10,7 @@ cmake_minimum_required(VERSION 3.27 FATAL_ERROR)
 # 设置项目名与版本
 project(
         printf_bare_metal
-        VERSION 1.8.1
+        VERSION 1.8.2
 )
 
 # 禁止原地编译

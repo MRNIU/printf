@@ -17,6 +17,11 @@ target_compile_options(${PROJECT_NAME} PRIVATE
         $<$<CONFIG:Release>:-O3;-Werror>
         -Wall
         -Wextra
+        -ffreestanding
+)
+
+target_link_options(${PROJECT_NAME} PRIVATE
+        -no-pie
 )
 
 set_target_properties(${PROJECT_NAME} PROPERTIES PUBLIC_HEADER "include/printf_bare_metal.h")
