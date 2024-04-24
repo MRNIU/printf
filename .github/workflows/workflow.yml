@@ -25,3 +25,4 @@ jobs:
           cmake --preset build
           cmake --build build --target printf_bare_metal
           cmake --build build --target printf_bare_metal_test
+          ./build/bin/printf_bare_metal_test
