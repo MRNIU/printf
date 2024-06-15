@@ -24,9 +24,11 @@ endif ()
 add_subdirectory(src)
 
 if (CMAKE_SYSTEM_PROCESSOR STREQUAL CMAKE_HOST_SYSTEM_PROCESSOR)
+if (NOT TARGET gtest)
     # https://github.com/google/googletest.git
     add_subdirectory(3rd/googletest)
     include(GoogleTest)
+endif()
 
     add_subdirectory(test)
 endif ()
